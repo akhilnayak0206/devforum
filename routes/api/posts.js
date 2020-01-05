@@ -240,8 +240,6 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
       comment => comment.id === req.params.comment_id
     );
 
-    console.log('here', comment);
-
     //Make sure comment exists
     if (!comment) {
       return res.status(404).json({ msg: 'Comment does not exist.' });
@@ -256,8 +254,6 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
     const removeIndex = post.comments
       .map(comment => comment.id)
       .indexOf(req.params.comment_id);
-
-    console.log('here', removeIndex);
 
     post.comments.splice(removeIndex, 1);
 
