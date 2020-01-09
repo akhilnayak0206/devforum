@@ -18,7 +18,7 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
 
-// Serve static assets i.e. React build folder in production
+// Serve static assets i.e. React(Front End) build folder in production
 if (process.env.NODE_ENV === 'production') {
   //Set static folder
   app.use(express.static('client/build'));
