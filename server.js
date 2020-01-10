@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
 
   app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, './client/build/index.html'));
-    // changed the above line from path.res(__dirname, 'client', 'build', 'index.html')); to allow reloading of the site.
+    // changed the above line from path.res(__dirname, 'client', 'build', 'index.html')); to allow reloading of the site & load through URL
   });
 }
 
